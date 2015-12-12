@@ -8,8 +8,8 @@ var User = require('../models/user');
 var Item = require('../models/item');
 var Trade = require('../models/trade');
 
-router.get('/', authMiddleware, function(req, res, next) {
-  var payload = jwt.decode(req.cookies.token, process.env.JWT_SECRET)
+router.post('/', authMiddleware, function(req, res, next) {
+  var payload = jwt.decode(req.body.token, process.env.JWT_SECRET)
   console.log(payload)
   var data = {}
   data.currentUser = payload.username
@@ -24,7 +24,7 @@ router.get('/', authMiddleware, function(req, res, next) {
           // console.log('Pending Trades: ', pendingTrades);
           data.pendingTrades = pendingTrades
           console.log(data)
-          res.render('trading/trading', {data: data});
+          res.render({data: data});
         }).populate('requestingUser respondingUser requestedItem responseItem', "username itemName")
       }).populate('owner', 'username')
   })
