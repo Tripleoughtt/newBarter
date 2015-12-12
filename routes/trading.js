@@ -24,7 +24,7 @@ router.post('/', authMiddleware, function(req, res, next) {
           // console.log('Pending Trades: ', pendingTrades);
           data.pendingTrades = pendingTrades
           console.log(data)
-          res.render({data: data});
+          res.send({data: data});
         }).populate('requestingUser respondingUser requestedItem responseItem', "username itemName")
       }).populate('owner', 'username')
   })
