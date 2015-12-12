@@ -1,0 +1,44 @@
+body {
+  background-color: #191d21;
+  color: #67c2db;
+  text-align: center;
+  font-size: 16px;
+}
+
+.btn {
+  margin: 10px 10px 0 10px;
+}
+
+
+/*sticky footer - did not have a chance to implement this
+#clearFooter {
+  clear: both;
+  height: 50px;
+}
+html, body {
+  height: 100%;
+}
+.container {
+  min-height: 100%;
+}
+.container:after {
+  content: '';
+  display: block;
+}
+#footer {
+  height: 50px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 150;
+}
+#test {
+  border-radius: 10px 10px 0 0 ;
+  background-color: black;
+  opacity: 0.5;
+}
+img {
+  text-align: left;
+  height: 100px;
+  padding: 10px;
+}*/

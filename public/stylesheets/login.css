@@ -1,0 +1,14 @@
+.message, #logout {
+  text-align: center;
+  display: none;
+}
+
+.warning {
+  font-size: 12px;
+  color: #d68539;
+} 
+
+#success {
+  font-size: 25px;
+  color: #55aa67;
+}

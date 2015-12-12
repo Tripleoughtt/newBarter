@@ -1,0 +1,77 @@
+textarea {
+  min-height: 300px;
+}
+#publicItemsTemplate, #myItemsTemplate {
+  display: none;
+}
+
+.well {
+  min-height: 80vh;
+}
+
+.message {
+  display: none;
+}
+
+.warning {
+  font-size: 12px;
+  color: #d68539;
+} 
+
+.sectionTitle {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.trade {
+  background-color: #464545;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  text-align: left;
+}
+
+.options {
+  text-align: center;
+}
+
+.trade > div {
+  padding: 0;
+}
+
+.myItem, .publicItemName, .publicItemOwner {
+  text-align: left;
+  vertical-align: center;
+  font-size: 16px;
+}
+
+#trade {
+  cursor: auto;
+}
+
+.acceptTrade, .declineTrade, .cancelTrade {
+  padding: 5px;
+}
+
+.pendingString {
+  margin: 16px;
+}
+
+.modal-body {
+  overflow-y: auto;
+}
+
+
+
+
+div {
+  /*border: 1px solid red;*/
+}
+
+
+
+
+
+
+
+

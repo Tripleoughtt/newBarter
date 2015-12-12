@@ -1,0 +1,39 @@
+div {
+  /*border: 1px solid red;*/
+}
+
+.key {
+  text-align: right;
+  font-weight: bold;
+}
+
+.value {
+  text-align: left;
+}
+
+#bio {
+  min-height: 100px;
+}
+
+#userBio > .key {
+  vertical-align: center;
+}
+
+#edit {
+  vertical-align: bottom;
+  cursor: pointer;
+}
+
+.subscript {
+  font-size: 15px;
+  font-style: italic;
+}
+.marginBump {
+  margin-bottom: 10px;
+}
+
+#editBio {
+  display: none;
+  border-radius: 5px;
+  min-height: 100px;
+}

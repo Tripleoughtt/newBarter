@@ -1,0 +1,70 @@
+extends ./layout.jade
+
+block css
+  link(rel='stylesheet', href="stylesheets/login.css")
+block nav
+  li
+    #register.btn.btn-info.btn-responsive(type='submit') Register
+  li
+    #login.btn.btn-info.btn-responsive(type='submit') Login
+block content
+  #registration.modal.fade(tabindex='-1', role='dialog', aria-labelledby='registerUser', area-describedby='a modal to register user')
+    .modal-dialog.modal-lg(role='document')
+      .modal-content
+        .modal-header
+          button.close(type='button', data-dismiss='modal', aria-label='Close')
+            span(aria-hidden='true') ×
+          h4.modal-title Register new user
+        .modal-body
+          .row
+            form.form-horizontal
+              .row.form-group
+                label.col-sm-4.control-label(for='email') Email
+                .col-sm-4
+                  input#email.form-control(type='text', placeholder='JoeShmoe@yourdomain.com', autofocus)
+              .row.form-group
+                label.col-sm-4.control-label(for='username') Username
+                .col-sm-4
+                  input#username.form-control(type='text', placeholder='username', autofocus)
+              .row.form-group
+                label.col-sm-4.control-label(for='password') Password
+                .col-sm-4
+                  input#password.form-control(type='password', placeholder='password')
+              .row.form-group
+                label.col-sm-4.control-label(for='confirmPassword') Confirm password
+                .col-sm-4
+                  input#confirmPassword.form-control(type='password', placeholder='password')
+              #registerEmptyFormWarn.warning.message All fields must be filled
+              #passwordMatchWarn.warning.message Passwords must match
+              #success.message Registration successful!
+              #tryAgain.warning.message Error.  Please try again.
+        .modal-footer
+          button.cancel.btn.btn-default(type='button', data-dismiss='modal') Cancel
+          button#registerNewUser.btn.btn-primary(type='button') Register
+  #loginUser.modal.fade(tabindex='-1', role='dialog', aria-labelledby='login-user', area-describedby='a modal for the user to login')
+    .modal-dialog.modal-ls(role='document')
+      .modal-content
+        .modal-header
+          button.close(type='button', data-dismiss='modal', aria-label='Close')
+            span(aria-hidden='true') ×
+          h4.modal-title Login
+        .modal-body
+          .row
+            form.form-horizontal
+              .form-group
+                label.col-sm-3.control-label(for='loginUsername') Username
+                .col-sm-4
+                  input#loginUsername.form-control(type='text', placeholder='username', autofocus)
+              .form-group
+                label.col-sm-3.control-label(for='loginPassword') password
+                .col-sm-4
+                  input#loginPassword.form-control(type='password', placeholder='password')
+              #loginEmptyFormWarn.warning.message All fields must be filled
+              #tryAgain.warning.message Error.  Please try again.
+        .modal-footer
+          button.cancel.btn.btn-default(type='button', data-dismiss='modal') Cancel
+          button#saveEdit.btn.btn-primary(type='button') Login
+block js
+  script(src='js/login.js')
+
+

@@ -1,0 +1,24 @@
+block pending modal
+  #pendingModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='user1 user2 item1 item2', area-describedby='pending trades')
+    .modal-dialog.modal-lg(role='document')
+      .modal-content
+        .modal-header
+          button.close(type='button', data-dismiss='modal', aria-label='Close')
+            span(aria-hidden='true') ×
+          h3.modal-title Pending Trades
+        .modal-body
+          .row.toCenter
+            .col-md-12#pendings
+              if data.pendingTrades
+                each trade in data.pendingTrades
+                  .trade.row
+                    .pendingString.col-md-9 #{trade.requestingUser.username} wants to offer #{trade.responseItem.itemName} for #{trade.respondingUser.username}'s #{trade.requestedItem.itemName}.
+                    .btnContainer
+                      .row
+                        if data.currentUser === trade.respondingUser.username
+                          .btn.btn-responsive.btn-info.acceptTrade(id= trade._id) Accept
+                          .btn.btn-responsive.btn-info.declineTrade(id= trade._id) Decline
+                        else
+                          .btn.btn-responsive.btn-info.cancelTrade(id= trade._id) Cancel
+        .modal-footer
+          button.OK.btn.btn-default(type='button', data-dismiss='modal') OK

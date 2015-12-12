@@ -1,0 +1,24 @@
+block profile modal
+  #profileModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='edit bio editbio', area-describedby='add new items here')
+    .modal-dialog.modal-lg(role='document')
+      .modal-content
+        .modal-header
+          button.close(type='button', data-dismiss='modal', aria-label='Close')
+            span(aria-hidden='true') ×
+          h4.modal-title Add new item
+        .modal-body
+          .row
+            .key.col-sm-4 
+              .row
+                .marginBump.col-sm-12 Name
+                .marginBump.col-sm-12 Bio
+                #edit.subscript.col-sm-12 edit
+            .value.col-sm-6
+              .row
+                .marginBump.col-sm-12 Jamie
+                #bio.col-sm-12 Trade all the things!
+                textarea#editBio.col-sm-12 Trade all the things!
+            #tryAgain.warning.message Error.  Please try again.
+        .modal-footer
+          button.cancel.btn.btn-default(type='button', data-dismiss='modal') Cancel
+          button#saveBioEdit.btn.btn-primary(type='button') Save

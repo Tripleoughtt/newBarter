@@ -1,0 +1,12 @@
+extends layout
+
+block css
+  link(rel='stylesheet', href="stylesheets/error.css")
+
+
+block content
+  img#error(src="/media/error.jpg")
+  h1= message
+  h2= error.status
+  .col-md-8.col-md-offset-2
+    pre #{error.stack}

@@ -1,0 +1,38 @@
+block my items
+  .row
+    .sectionTitle.col-md-12
+      .row
+        .col-md-12 My Items
+        .subscript.col-md-12 Step #2. Select an item to offer for barter.
+  .row
+    table.table.table-striped.table-hover.table-condensed.table-responsive
+      tr
+        th.col-md-9 Item
+        th.options.col-md-1 For Trade
+        th.options.col-md-1 Offer item
+        th.options.col-md-1  
+      tbody#myItemsTable      
+        if data.myItems
+          each item in data.myItems
+            tr(id=item._id)
+              td.item
+                .myItem= item.itemName
+              td
+                input.forTrade(type="checkbox" checked=(item.forTrade))
+              td
+                input.offer(type="radio" name="offer") 
+              td
+                i.fa.fa-trash.fa-md.deleteItem
+        tr#myItemsTemplate
+          td.item
+            .myItem
+          td
+            input.forTrade(type="checkbox" checked)
+          td
+            input.offer(type="radio" name="offer") 
+          td
+            i.fa.fa-trash.fa-md.deleteItem 
+  .row
+    .subscript.col-md-12 Step #3. Send barter request to owner of desired item.
+    button(disabled).btn.btn-responsive.btn-info#trade Make Barter Offer
+

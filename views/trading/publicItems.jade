@@ -1,0 +1,30 @@
+block public items
+  .row
+    .sectionTitle.col-md-12
+      .row
+        .col-md-12 Publicly Bartered Items
+        .subscript.col-md-12 Step #1. Select your desired item.
+  .row
+    table.table.table-striped.table-hover.table-condensed.table-responsive
+      tr
+        th.col-md-7 Item
+        th.col-md-4 Owner
+        th.options.col-md-1 Request Item
+      tbody#publicItemsTable
+      if data.publicItems
+        each item in data.publicItems
+          tr(id=item._id)
+            td.item
+              .publicItemName= item.itemName
+            td
+              .publicItemOwner= item.owner.username
+            td
+              input.request(type="radio" name="request")
+
+      tr#publicItemsTemplate
+        td.item
+          .publicItemName
+        td
+          .publicItemOwner
+        td
+          input.request(type="radio" name="request")
