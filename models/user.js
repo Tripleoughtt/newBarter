@@ -76,5 +76,3 @@ userSchema.statics.register = function(user, cb) {
 User = mongoose.model('User', userSchema)
 
 module.exports = User;
-
-
