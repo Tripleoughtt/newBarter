@@ -5,8 +5,8 @@ var User = require('../models/user');
 var jwt = require('jwt-simple');
 
 module.exports = function(req, res, next){
-  if (req.cookies.token){
-    var token = req.cookies.token 
+  if (req.body.token){
+    var token = req.body.token 
     var decodedToken = jwt.decode(token, process.env.JWT_SECRET);
     console.log(decodedToken)
     var userId = decodedToken._id;
