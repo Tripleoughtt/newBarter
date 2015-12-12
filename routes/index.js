@@ -18,8 +18,7 @@ router.post('/login', function(req, res){
     console.log ('Success!');
     
     var token = user.token(user);
-    res.cookie('token', token);
-    res.send({redirect: '/trading'})
+    res.send(token)
     }
   })
 });
